@@ -1,0 +1,98 @@
+/* Estilos para elementos dinâmicos gerados pelo JavaScript */
+
+/* Estilos para o Toast */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    padding: 12px 20px;
+    color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s, opacity 0.3s;
+    max-width: 350px;
+}
+
+.toast.success {
+    background-color: var(--accent-color);
+}
+
+.toast.error {
+    background-color: var(--news-red);
+}
+
+.toast.info {
+    background-color: var(--primary-color);
+}
+
+/* Estilo para notícias de última hora importantes */
+#breaking-text.important {
+    font-weight: bold;
+}
+
+.breaking-news.flash {
+    background-color: #ff0000;
+}
+
+/* Estilo para mensagem de ausência de resultados */
+.no-results {
+    text-align: center;
+    padding: 30px;
+    color: var(--dark-gray);
+    font-style: italic;
+}
+
+/* Estilo para o botão Leia Mais menor */
+.read-more-sm {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.read-more-sm:hover {
+    background-color: #2980b9;
+}
+
+/* Efeito de carregamento para novas notícias */
+.news-card.loading {
+    animation: cardLoading 1.5s infinite;
+    opacity: 0.7;
+}
+
+@keyframes cardLoading {
+    0% { opacity: 0.7; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.7; }
+}
+
+/* Estilo para contador de notícias */
+#counter {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Melhorias para dispositivos móveis */
+@media (max-width: 576px) {
+    .news-card-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .toast-container {
+        left: 20px;
+        right: 20px;
+    }
+    
+    .toast {
+        max-width: none;
+    }
+}

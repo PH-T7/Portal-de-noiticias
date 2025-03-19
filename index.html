@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dynamic-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>InfoNews</h1>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar notícias...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <button id="changeColorBtn"><i class="fas fa-moon"></i></button>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li data-category="all" class="active">Todas</li>
+                    <li data-category="tech">Tecnologia</li>
+                    <li data-category="science">Ciência</li>
+                    <li data-category="health">Saúde</li>
+                    <li data-category="politics">Política</li>
+                    <li data-category="sports">Esportes</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="breaking-news">
+            <span>ÚLTIMAS NOTÍCIAS</span>
+            <p id="breaking-text">Cientistas descobrem nova espécie de planta com propriedades medicinais</p>
+        </div>
+        
+        <main>
+            <section class="featured-news">
+                <div class="main-article">
+                    <div class="article-image" style="background-image: url('https://via.placeholder.com/800x500')"></div>
+                    <div class="article-content">
+                        <span class="category tech">Tecnologia</span>
+                        <h2>Nova Inteligência Artificial Promete Revolucionar Diagnósticos Médicos</h2>
+                        <p class="article-meta">Por <span class="author">Maria Silva</span> • <span class="date">22 Nov 2023</span></p>
+                        <p class="article-excerpt">Sistema desenvolvido por pesquisadores brasileiros alcança 97% de precisão em testes preliminares e pode reduzir custos no sistema de saúde.</p>
+                        <button class="read-more">Leia mais</button>
+                        <button class="favorite" data-id="1"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="content-wrapper">
+                <section class="news-grid" id="newsContainer">
+                    <!-- Notícias serão carregadas dinamicamente pelo JavaScript -->
+                </section>
+                
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <h3>Mais Lidas</h3>
+                        <ul class="trending-list">
+                            <li>
+                                <span class="number">1</span>
+                                <div class="trending-item">
+                                    <h4>Avanço na vacina contra dengue mostra resultados promissores</h4>
+                                    <span class="category health">Saúde</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="number">2</span>
+                                <div class="trending-item">
+                                    <h4>Novo smartphone dobrável será lançado no próximo mês</h4>
+                                    <span class="category tech">Tecnologia</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="number">3</span>
+                                <div class="trending-item">
+                                    <h4>Seleção brasileira anuncia convocados para próximos jogos</h4>
+                                    <span class="category sports">Esportes</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Newsletter</h3>
+                        <p>Receba as principais notícias no seu email</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Seu email" id="newsletterEmail">
+                            <button id="subscribeBtn">Inscrever</button>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section weather-widget">
+                        <h3>Clima</h3>
+                        <div class="weather-info">
+                            <i class="fas fa-sun"></i>
+                            <div class="weather-data">
+                                <span class="temperature">28°C</span>
+                                <span class="location">São Paulo, SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <div class="load-more-container">
+                <button id="loadMoreBtn">Carregar mais notícias</button>
+                <span id="counter">0</span> notícias carregadas
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>InfoNews</h3>
+                    <p>Seu portal de notícias completo e atualizado. Trazendo informação confiável desde 2023.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li>Tecnologia</li>
+                        <li>Ciência</li>
+                        <li>Saúde</li>
+                        <li>Política</li>
+                        <li>Esportes</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li>Sobre nós</li>
+                        <li>Política de Privacidade</li>
+                        <li>Termos de Uso</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 InfoNews - Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="dist/script.js"></script>
+</body>
+</html>

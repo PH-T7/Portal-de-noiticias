@@ -1,0 +1,12 @@
+{
+  "name": "simple-typescript-web",
+  "version": "1.0.0",
+  "description": "Um exemplo simples de página web com TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
